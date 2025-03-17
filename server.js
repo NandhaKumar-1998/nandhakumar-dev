@@ -82,18 +82,38 @@ router.get('/protected', authMiddleware, async (ctx) => {
     }
 });
 
-router.post('/items', authMiddleware, async (ctx) => {
+// router.post('/additems', authMiddleware, async (ctx) => {
+//     try {
+//         const { name, email } = ctx.request.body;
+//         const userId = ctx.state.user.userId;
+//         const newItem = new Item({ name, email, userId });
+//         await newItem.save();
+//         ctx.body = { message: 'Item created successfully', item: newItem };
+//     } catch (error) {
+//         ctx.status = 500;
+//         ctx.body = { message: 'Error creating item', error: error.message };
+//     }
+// });
+
+
+
+router.post("/addusers", async (ctx) => {
     try {
-        const { name, description } = ctx.request.body;
-        const userId = ctx.state.user.userId;
-        const newItem = new Item({ name, description, userId });
-        await newItem.save();
-        ctx.body = { message: 'Item created successfully', item: newItem };
+      const { name, email, password } = ctx.request.body;
+      if (!name || !email || !password) {
+        ctx.status = 400;
+        ctx.body = { message: "Name, email, and password are required" };
+        return;
+      }
+      const newUser = new User({ name, email, password });
+      await newUser.save();
+      ctx.status = 201;
+      ctx.body = { message: "User created successfully", user: newUser };
     } catch (error) {
-        ctx.status = 500;
-        ctx.body = { message: 'Error creating item', error: error.message };
+      ctx.status = 500;
+      ctx.body = { message: "Error creating user", error: error.message };
     }
-});
+  });
 
 router.get('/items', authMiddleware, async (ctx) => {
     try {
