@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   images: {
     unoptimized: true
+  },
+  devIndicators: {
+    buildActivity: false
   }
 };
 
