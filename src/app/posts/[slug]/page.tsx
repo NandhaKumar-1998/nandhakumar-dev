@@ -672,8 +672,9 @@ Remember: The goal isn't to trick customers, but to present your value propositi
   }
 ];
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts.find(p => p.slug === params.slug);
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = posts.find(p => p.slug === slug);
   
   if (!post) {
     notFound();
