@@ -38,7 +38,8 @@ const fallbackPosts: Post[] = [
 
 async function getPost(slug: string): Promise<Post | null> {
   try {
-    const res = await fetch(`http://localhost:3001/api/posts?slug=${slug}`, {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+    const res = await fetch(`${apiUrl}/api/posts?slug=${slug}`, {
       next: { revalidate: 60 } // ISR - revalidate every 60 seconds
     });
     
@@ -58,7 +59,8 @@ async function getPost(slug: string): Promise<Post | null> {
 
 async function getAllPosts(): Promise<Post[]> {
   try {
-    const res = await fetch('http://localhost:3001/api/posts', {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+    const res = await fetch(`${apiUrl}/api/posts`, {
       next: { revalidate: 60 } // ISR - revalidate every 60 seconds
     });
     

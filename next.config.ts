@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Remove 'output: export' to enable ISR
+  // Configuration for Cloudflare Pages
   trailingSlash: false,
   skipTrailingSlashRedirect: false,
   images: {
