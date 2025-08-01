@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
+  // Remove 'output: export' to enable ISR
+  trailingSlash: false,
+  skipTrailingSlashRedirect: false,
   images: {
     unoptimized: true
-  },
-  devIndicators: {
-    buildActivity: false
   }
 };
 

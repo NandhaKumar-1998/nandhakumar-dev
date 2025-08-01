@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with Next.js and ISR",
+      "content": "This is a sample post to demonstrate ISR with JSON Server. Incremental Static Regeneration allows you to update static content after deployment without rebuilding your entire site.",
+      "date": "August 1, 2025",
+      "slug": "getting-started-nextjs-isr",
+      "category": "Tutorial",
+      "tags": ["Next.js", "ISR", "JSON Server"],
+      "readTime": "3 min reads"
+    },
+    {
+      "id": 2,
+      "title": "Building Dynamic Applications Part-2",
+      "content": "Learn how to combine the benefits of static site generation with dynamic content updates using ISR. This approach gives you the best of both worlds.",
+      "date": "August 1, 2024",
+      "slug": "dynamic-static-applications",
+      "category": "Architecture",
+      "tags": ["Performance", "Architecture", "Web Development"],
+      "readTime": "5 min read"
+    }
+  ]
+}
