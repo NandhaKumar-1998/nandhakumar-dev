@@ -35,9 +35,9 @@ export default function HomePage({ posts }: HomePageProps) {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <section className="text-center mb-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-16">
-            <h2 className="text-4xl font-bold mb-4">Next.js ISR with Cloudflare Workers Demo</h2>
-            <p className="text-xl opacity-90 mb-4">Experience the power of Incremental Static Regeneration</p>
-            <p className="text-lg opacity-80">Posts are fetched from Cloudflare Workers + D1 and updated every 60 seconds</p>
+            <h2 className="text-4xl font-bold mb-4">Next.js  Demo</h2>
+            <p className="text-xl opacity-90 mb-4"></p>
+            <p className="text-lg opacity-80"></p>
           </div>
         </section>
 
