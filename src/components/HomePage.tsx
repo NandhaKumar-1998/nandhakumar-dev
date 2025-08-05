@@ -35,20 +35,17 @@ export default function HomePage({ posts }: HomePageProps) {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <section className="text-center mb-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-16">
-            <h2 className="text-4xl font-bold mb-4">Next.js ISR with JSON Server Demo</h2>
+            <h2 className="text-4xl font-bold mb-4">Next.js ISR with Cloudflare Workers Demo</h2>
             <p className="text-xl opacity-90 mb-4">Experience the power of Incremental Static Regeneration</p>
-            <p className="text-lg opacity-80">Posts are fetched from JSON Server and updated every 60 seconds</p>
+            <p className="text-lg opacity-80">Posts are fetched from Cloudflare Workers + D1 and updated every 60 seconds</p>
           </div>
         </section>
 
         {/* JSON Server Status */}
         <section className="mb-12 bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="text-lg font-semibold text-blue-900 mb-2">JSON Server Status</h3>
+          <h3 className="text-lg font-semibold text-blue-900 mb-2">API Status</h3>
           <p className="text-blue-800">
-            Check if JSON Server is running: 
-            <a href="http://localhost:3001/api/posts" target="_blank" rel="noopener noreferrer" className="ml-2 underline hover:text-blue-600">
-              http://localhost:3001/api/posts
-            </a>
+          
           </p>
           <p className="text-sm text-blue-700 mt-1">
             {posts.length > 0 ? `✅ Currently showing ${posts.length} posts` : '❌ No posts found'}

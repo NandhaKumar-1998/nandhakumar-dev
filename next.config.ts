@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configuration for Cloudflare Pages
+  // Configuration for Cloudflare Pages (Static Export)
   output: 'export',
   trailingSlash: false,
   skipTrailingSlashRedirect: false,
